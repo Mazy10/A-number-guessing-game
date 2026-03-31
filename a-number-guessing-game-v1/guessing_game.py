@@ -12,11 +12,13 @@ import random
 
 # Create the start_game function.
 # Write your code inside this function.
-
-#   When the program starts, we want to:
+def start_game():  
+   #   When the program starts, we want to:
 #   ------------------------------------
 #   1. Display an intro/welcome message to the player.
+    print("welcome to the guessing game")
 #   2. Store a random number as the answer/solution.
+    
 #   3. Continuously prompt the player for a guess.
 #     a. If the guess is greater than the solution, display to the player "It's lower".
 #     b. If the guess is less than the solution, display to the player "It's higher".
