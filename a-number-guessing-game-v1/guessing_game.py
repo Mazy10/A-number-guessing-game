@@ -11,18 +11,34 @@ import random
 def start_game():
     print("welcome to the guessing game")
     guesses_list = []
-    winning_number = random.randint(1,50) 
-    guess = 0   
-    while True:
-        guess = int(input("What is the correct number? "))
-        guess += 1
-        if guess > winning_number:
-            print("it's lower")
-        elif guess < winning_number:
-            print("it's higher")
+    play_again = "y"
+
+    while play_again == "y":
+        winning_number = random.randint(1,10) 
+        guesses = 0   
+        while True:
+            guess = int(input("What is the correct number? "))
+            guesses += 1
+            if guess > winning_number:
+                print("it's lower")
+            elif guess < winning_number:
+                print("it's higher")
+            else:
+                print("Got it")
+                guesses_list.append(guesses)
+                print(f'The number of guesses it took you was: {guesses}')
+                print(f'The mean of the number of attempts was: {statistics.mean(guesses_list)}')
+                print(f'The median of the number of attempts was: {statistics.median(guesses_list)}')
+                print(f'The mode of the number of attempts was: {statistics.mode(guesses_list)}')
+                print(guesses_list)
+                break
+        play_again = input("Do you want to play again? (y/n) ")
+        if play_again.lower() == "y":
+            continue
         else:
-            print("Got it")
+            print("Thanks for playing! See you again soon.")
             break
+
 
 start_game()
 
