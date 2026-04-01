@@ -11,7 +11,7 @@ import random
 def start_game():
     print("welcome to the guessing game")
     guesses_list = []
-    winning_number = random.randit(1,50) 
+    winning_number = random.randint(1,50) 
     guess = 0   
     while True:
         guess = int(input("What is the correct number? "))
