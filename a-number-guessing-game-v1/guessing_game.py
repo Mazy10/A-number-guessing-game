@@ -8,7 +8,7 @@ import statistics
 import random
 
 def start_game():
-    print("Welcome to the guessing game!")
+    print("Welcome to the guessing game!! Are you ready?")
     guesses_list = []
     play_again = "y"
 
@@ -18,13 +18,13 @@ def start_game():
             print(f'The highest score is: {min(guesses_list)}')
         else:
             print("No high score. Can you be the first?")
-        winning_number = random.randint(1,50) 
+        winning_number = random.randint(1,10) 
         guesses = 0   
         while True:
             try:
                 guess = int(input("What is the correct number? "))
                 guesses += 1
-                if guess > 50:
+                if guess > 10:
                     print("Oops! This number is outside the range. Please try again")                  
                     continue                 
                 
