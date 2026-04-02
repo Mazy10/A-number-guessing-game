@@ -8,7 +8,7 @@ import statistics
 import random
 
 def start_game():
-    print("Welcome to the guessing game!! Are you ready?")
+    print("Welcome to the guessing game!")
     guesses_list = []
     play_again = "y"
 
